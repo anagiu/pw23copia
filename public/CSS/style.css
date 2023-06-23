@@ -1,0 +1,14 @@
+body{
+    background-color: turquoise;
+}
+    .pagination{
+        border:2px dashed;
+
+
+li{
+    float: left;
+    list-style-type: none
+
+}
+
+

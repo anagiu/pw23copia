@@ -24,7 +24,7 @@
     <input type="submit" value="Buscar">
 </form>
 <br>
-<table border="1" style="border-color:rgb(52, 214, 87)">
+<table border="1" style="border-color:rgba(37, 184, 68, 0.726)">
     <tr>
         <th>Nome</th>
         <th>Preço</th>

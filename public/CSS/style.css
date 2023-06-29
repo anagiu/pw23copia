@@ -1,13 +1,13 @@
 body{
-    background-color: turquoise;
+    background-color: rgb(138, 252, 240);
 }
     .pagination{
         border:2px dashed;
 
-
+    }
 li{
     float: left;
-    list-style-type: none
+    list-style-type: none;
 
 }
 

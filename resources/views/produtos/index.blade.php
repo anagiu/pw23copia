@@ -6,7 +6,7 @@
 @section('content')
 
 @if (session('sucesso'))
-    <div style="background-color:greenyellow;color:rebeccapurple;">
+    <div style="background-color:rgb(255, 47, 220);rgb(163, 71, 255) purple;">
         <marquee>
         🎆 {{ session('sucesso') }}
         </marquee>
@@ -24,7 +24,7 @@
     <input type="submit" value="Buscar">
 </form>
 <br>
-<table border="1" style="border-color:rgba(37, 184, 68, 0.726)">
+<table border="1" style="border-color:rgba(204, 0, 255, 0.726)">
     <tr>
         <th>Nome</th>
         <th>Preço</th>

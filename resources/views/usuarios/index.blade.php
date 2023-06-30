@@ -1,39 +1,28 @@
+{{-- resources/views/usuarios/index.blade.php --}}
 @extends('includes.base')
 
-@section('title', 'Usuarios')
+@section('title', 'Usuários')
 
 @section('content')
 
-@if (session('sucesso'))
-    <div style="background-color:rgb(255, 176, 251);color:rgb(157, 59, 255);">
-    </div>
-@endif
-
-<form action="{{route('produtos')}}" method="post">
-
-    @csrf
-
-    </select>
-
-</form>
-<br>
-<table border="1" style="border-color:rgba(51, 0, 145, 0.726)">
+<table border="1" style="border-color:rgb(255, 0, 221)">
     <tr>
         <th>Nome</th>
-        <th>Email</th>
+        <th>E-mail</th>
+        <th>Editar</th>
+        <th>Apagar</th>
     </tr>
 
-    @foreach ($usuarios as $usuario)
+    @foreach ($users as $usr)
     <tr>
-        <td><a href="{{ route('produtos.view', $usuario->id) }}">{{ $usuario->name }}</a></td>
-        <td>{{ $usuario->email }}</td>
-        <td><a href="{{ route('usuarios.edit', $usuario->id) }}">Editar</a></td>
-        <td><a href="{{ route('usuarios.delete', $usuario->id) }}">Apagar</a></td>
+        <td><a href="{{ route('usuarios.view', $usr->id) }}">{{ $usr->name }}</a></td>
+        <td>{{ $usr->email }}</td>
+        <td><a href="{{ route('usuarios.edit', $usr->id) }}">Editar</a></td>
+        <td><a href="{{ route('usuarios.delete', $usr->id) }}">Apagar</a></td>
     </tr>
     @endforeach
 
 </table>
 
-{{$prods->links('vendor.pagination.default')}}
-
+<a href="{{ route('usuarios.add')}}">Adicionar</a>
 @endsection

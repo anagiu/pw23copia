@@ -10,16 +10,27 @@
 </head>
 <body>
 
-    <h1>Site lindão</h1>
+    <h1>Sitezito UwU 👉🏻👈🏻</h1>
+
+    <div>
+        @if (Auth::user())
+        Bodia{{Auth::user()->name}}.
+        <br>
+        <a href="{{route ('logout') }}">Sair</a>
+
+        @else
+            <a href="{{route('login')}}">Fazer login login!!!</a>
+        @endif
+    </div>
     <!-- Menu -->
     <div>
         <ul>
             <li><a href="{{ route('home')}} ">Home</a></li>
             <li><a href="{{ route('produtos')}}">Produtos</a></li>
-            <li><a href="{{ route('usuarios')}}">Usuarios</a></li>
+            <li><a href="{{ route('usuarios')}}">Usuários</a></li>
         </ul>
     </div>
-    <hr style="height:6px;background-color:deepskyblue">
+    <hr style="height:6px;background-color:rgb(241, 112, 253)">
 
     {{-- Conteúdo --}}
     @yield('content')
